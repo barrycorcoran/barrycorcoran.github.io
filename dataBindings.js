@@ -30,7 +30,7 @@ var getScriptPromisify = (src) => {
       this.render()
     }
 
-    set myDataSources(dataBindings) {
+    set myDataSource (dataBinding) {
       this._myDataSource = dataBinding
       this.render()
     }
