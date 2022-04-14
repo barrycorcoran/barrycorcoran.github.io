@@ -25,21 +25,21 @@
             "type": "integer",
             "default": 420
         },
-        "dimensionFeed": {
+    "dimensionFeed": {
             "type": "string[]",
             "default": []
         },
         "measureFeed": {
             "type": "string[]",
             "default": []
-        }, 
-        "caption": {
-            "type": "string[]",
-            "description": "The caption of the external chart",
-            "default": ""
-        }
-    },
-    "dataBindings": {
+        },
+    "caption": {
+        "type": "string",
+        "description": "The caption of the gauge chart",
+        "default": ""
+    }
+  },
+  "dataBindings": {
         "myDataSource": {
             "feeds": [
                 {
@@ -55,94 +55,99 @@
             ]
         }
     },
-    "methods": {
-        "getCaption": {
-            "returnType": "string",
-            "description": "The caption of the chart",
-            "parameters": [],
-            "body": "return this.caption;"
-        },
-        "setCaption": {
-            "description":"The caption of the chart",
-            "parameters": [
-                {
-                    "name": "caption",
-                    "type": "string",
-                    "description": "The new caption"
-                }
-            ],
-            "body": "this.caption = caption;"
-        },
-        "openSelectModelDialog": {
-            "paramaters": [],
-            "body": "this.dataBindings.getDataBinding('myDataSource').openSelectModeDialog();"
-        },
-        "getDimensions": {
-            "parameters": [],
-            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getDimensions;",
-            "returnType": "DimensionsInfo[]"
-        },
-        "getMeasures": {
-            "parameters": [],
-            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getMeasures;",
-            "returnType": "MeasureInfo[]"
-        },
-        "addDimension": {
-            "parameters": [
-                {
-                    "name": "dimensionId",
-                    "type": "string"
-                }
-            ]
-        }, 
-        "addMeasure": {
-            "parameters": [
-                {
-                    "name": "dimensionId",
-                    "type": "string"
-                }
-            ]
-        }, 
-        "removeDimension": {
-            "parameters": [
-                {
-                    "name": "dimensionId",
-                    "type": "string"
-                }
-            ]
-        }, 
-        "removeMeasure": {
-            "parameters": [
-                {
-                    "name": "dimensionId",
-                    "type": "string"
-                }
-            ]
-        },
-        "getDimensionsOnFeed": {
-            "parameters": [],
-            "returnType": "string[]"
-        },
-        "getMeasuresOnFeed": {
-            "parameters": [],
-            "returnType": "string[]"
-        },
-        "getDataSource": {
-            "parameters": [], 
-            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource();",
-            "returnType": "DataSource"
-        },
-        "setModel": {
-            "parameters": [
-                {
-                    "name": "modelId",
-                    "type": "string"
-                }
-            ],
-            "body": "return this.dataBindings.getDataBinding('myDataSource').setModel(modelId);"
-        }
-
+  "methods": {
+    "getCaption": {
+      "returnType": "string",
+      "description": "The caption of the bar chart",
+      "parameters": [],
+      "body": "return this.caption;"
     },
-    "events": {
+    "setCaption": {
+      "description": "The caption of the bar chart",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "The new caption"
+        }
+      ],
+      "body": "this.caption = caption;"
+    },
+    "openSelectModelDialog": {
+      "parameters": [],
+      "body": "this.dataBindings.getDataBinding('myDataSource').openSelectModelDialog();"
+    },
+    "getDimensions": {
+      "parameters": [],
+      "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getDimensions();",
+      "returnType": "DimensionInfo[]"
+    },
+    "getMeasures": {
+      "parameters": [],
+      "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getMeasures();",
+      "returnType": "MeasureInfo[]"
+    },
+    "addDimension": {
+      "parameters": [
+        {
+          "name": "dimensionId",
+          "type": "string"
+        }
+      ]
+    },
+    "addMeasure": {
+      "parameters": [
+        {
+          "name": "measureId",
+          "type": "string"
+        }
+      ]
+    },
+    "removeDimension": {
+      "parameters": [
+        {
+          "name": "dimensionId",
+          "type": "string"
+        }
+      ]
+    },
+    "removeMeasure": {
+      "parameters": [
+        {
+          "name": "measureId",
+          "type": "string"
+        }
+      ]
+    },
+    "getDimensionsOnFeed": {
+      "parameters": [],
+      "returnType": "string[]"
+    },
+    "getMeasuresOnFeed": {
+      "parameters": [],
+      "returnType": "string[]"
+    },
+    "getDataSource": {
+      "parameters": [],
+      "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource();",
+      "returnType": "DataSource"
+    },
+    "setModel": {
+      "parameters": [
+        {
+          "name": "modelId",
+          "type": "string"
+        }
+      ],
+      "body": "this.dataBindings.getDataBinding('myDataSource').setModel(modelId);"
     }
-  }
+
+  },
+  "events": {
+    "onResultChanged": {
+      "description": "called when the result set of the widget changes"
+    },
+    "onClick": {
+      "description": "called when the result set of the widget changes"
+    }
+}}
