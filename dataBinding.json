@@ -1,0 +1,148 @@
+{
+    "eula": "",
+    "vendor": "Barry Corcoran - SAP",
+    "license": "",
+    "id": "com.sap.sac.sample.echarts.prepared",
+    "version": "1.1.0",
+    "name": "dataBindings Test Apache",
+    "newInstancePrefix": "dataBindingsTestApache",
+    "description": "Data Bindings Test Runs for External Charting",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "github-sap-demo-sample-chart",
+            "url": "https://barrycorcoran.github.io/dataBindings.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "width": {
+            "type": "integer",
+            "default": 600
+        },
+        "height": {
+            "type": "integer",
+            "default": 420
+        },
+        "dimensionFeed": {
+            "type": "string[]",
+            "default": []
+        },
+        "measureFeed": {
+            "type": "string[]",
+            "default": []
+        }, 
+        "caption": {
+            "type": "string[]",
+            "description": "The caption of the external chart",
+            "default": ""
+        }
+    },
+    "dataBindings": {
+        "myDataSource": {
+            "feeds": [
+                {
+                    "id": "dimensions",
+                    "description": "Dimensions",
+                    "type": "dimension"
+                },
+                {
+                    "id": "measures",
+                    "description": "Measures",
+                    "type": "mainStructureMember"
+                }
+            ]
+        }
+    },
+    "methods": {
+        "getCaption": {
+            "returnType": "string",
+            "description": "The caption of the chart",
+            "parameters": [],
+            "body": "return this.caption;"
+        },
+        "setCaption": {
+            "description":"The caption of the chart",
+            "parameters": [
+                {
+                    "name": "caption",
+                    "type": "string",
+                    "description": "The new caption"
+                }
+            ],
+            "body": "this.caption = caption;"
+        },
+        "openSelectModelDialog": {
+            "paramaters": [],
+            "body": "this.dataBindings.getDataBinding('myDataSource').openSelectModeDialog();"
+        },
+        "getDimensions": {
+            "parameters": [],
+            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getDimensions;",
+            "returnType": "DimensionsInfo[]"
+        },
+        "getMeasures": {
+            "parameters": [],
+            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource().getMeasures;",
+            "returnType": "MeasureInfo[]"
+        },
+        "addDimension": {
+            "parameters": [
+                {
+                    "name": "dimensionId",
+                    "type": "string"
+                }
+            ]
+        }, 
+        "addMeasure": {
+            "parameters": [
+                {
+                    "name": "dimensionId",
+                    "type": "string"
+                }
+            ]
+        }, 
+        "removeDimension": {
+            "parameters": [
+                {
+                    "name": "dimensionId",
+                    "type": "string"
+                }
+            ]
+        }, 
+        "removeMeasure": {
+            "parameters": [
+                {
+                    "name": "dimensionId",
+                    "type": "string"
+                }
+            ]
+        },
+        "getDimensionsOnFeed": {
+            "parameters": [],
+            "returnType": "string[]"
+        },
+        "getMeasuresOnFeed": {
+            "parameters": [],
+            "returnType": "string[]"
+        },
+        "getDataSource": {
+            "parameters": [], 
+            "body": "return this.dataBindings.getDataBinding('myDataSource').getDataSource();",
+            "returnType": "DataSource"
+        },
+        "setModel": {
+            "parameters": [
+                {
+                    "name": "modelId",
+                    "type": "string"
+                }
+            ],
+            "body": "return this.dataBindings.getDataBinding('myDataSource').setModel(modelId);"
+        }
+
+    },
+    "events": {
+    }
+  }
