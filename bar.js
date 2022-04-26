@@ -55,19 +55,14 @@ var getScriptPromisify = (src) => {
 
       const myChart = echarts.init(this._root, "wight");
       const option = {
-        tooltip: {
-          formatter: "{a} <br/>{b} : {c}%",
-        },
+        xAxis: {},
+        yAxis: {},
         series: [
           {
-            name: "Pressure",
-            type: "gauge",
-            progress: {
-              show: true,
-            },
-            detail: {
-              valueAnimation: true,
-              formatter: "{value}",
+            type: "bar",
+            showBackground: true,
+            backgroundStyle: {
+              color: "rgba(180, 180, 180, 0.2)",
             },
             data,
           },
