@@ -109,7 +109,7 @@ var getScriptPromisify = (src) => {
   }
 
   customElements.define(
-    "github-sap-demo-sample-ringGauge",
+    "github-sap-demo-sample-ringgauge",
     SampleRingGaugePrepped
   );
 })();
