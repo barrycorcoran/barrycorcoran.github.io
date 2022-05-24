@@ -12,7 +12,7 @@ var getScriptPromisify = (src) => {
         <div id="root" style="width: 100%; height: 100%;">
         </div>
       `;
-  class SamplePiePrepared extends HTMLElement {
+  class SampleSankeyChart extends HTMLElement {
     constructor() {
       super();
 
@@ -68,5 +68,5 @@ var getScriptPromisify = (src) => {
     }
   }
 
-  customElements.define("github-sap-demo-sample-chart", SamplePiePrepared);
+  customElements.define("github-sap-sankey-chart", SampleSankeyChart);
 })();
