@@ -18,14 +18,14 @@
         {
             "kind": "styling",
             "tag": "github-sap-demo-v1-chartinb-span",
-            "url": "https://barrycorcoran.github.io/demo_span.js",
+            "url": "https://barrycorcoran.github.io/demoV1/demo_span.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
             "tag": "github-sap-demo-v1-chartinb-bpan",
-            "url": "https://barrycorcoran.github.io/demo_bpan.js",
+            "url": "https://barrycorcoran.github.io/demoV1/demo_bpan.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
