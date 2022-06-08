@@ -12,7 +12,7 @@ var getScriptPromisify = (src) => {
         <div id="root" style="width: 100%; height: 100%;">
         </div>
       `;
-  class SampleSankeyChart extends HTMLElement {
+  class SampleSankeyChartPrepped extends HTMLElement {
     constructor() {
       super();
 
@@ -61,12 +61,13 @@ var getScriptPromisify = (src) => {
           emphasis: {
             focus: "adjacency",
           },
-          data,
+          data: [],
+          links: [],
         },
       };
       myChart.setOption(option);
     }
   }
 
-  customElements.define("github-sap-sankey-chart", SampleSankeyChart);
+  customElements.define("com-sap-sample-sankey", SampleSankeyChartPrepped);
 })();
