@@ -61,8 +61,8 @@ var getScriptPromisify = (src) => {
           emphasis: {
             focus: "adjacency",
           },
-          data: [],
-          links: [],
+          data,
+          links,
         },
       };
       myChart.setOption(option);
