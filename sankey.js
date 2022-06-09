@@ -12,7 +12,7 @@ var getScriptPromisify = (src) => {
         <div id="root" style="width: 100%; height: 100%;">
         </div>
       `;
-  class SampleSankeyChartPrepped extends HTMLElement {
+  class SampleSankeyChart extends HTMLElement {
     constructor() {
       super();
 
@@ -55,19 +55,20 @@ var getScriptPromisify = (src) => {
 
       const myChart = echarts.init(this._root, "wight");
       const option = {
-        series: {
-          type: "sankey",
-          layout: "none",
-          emphasis: {
-            focus: "adjacency",
+        series: [
+          {
+            type: "sankey",
+            layout: "none",
+            emphasis: {
+              focus: "adjacency",
+            },
+            data,
           },
-          data,
-        },
-        links,
+        ],
       };
       myChart.setOption(option);
     }
   }
 
-  customElements.define("com-sap-sample-sankey", SampleSankeyChartPrepped);
+  customElements.define("com-sap-sample-sankey", SampleSankeyChart);
 })();
