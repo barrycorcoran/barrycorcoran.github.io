@@ -64,7 +64,7 @@ var getScriptPromisify = (src) => {
         },
         series: [
           {
-            name: "Access From",
+            name: "",
             type: "pie",
             selectedMode: "single",
             radius: [0, "30%"],
@@ -77,7 +77,7 @@ var getScriptPromisify = (src) => {
             },
           },
           {
-            name: "Access From",
+            name: "",
             type: "pie",
             radius: ["45%", "60%"],
             labelLine: {
