@@ -56,21 +56,15 @@ var getScriptPromisify = (src) => {
       const myChart = echarts.init(this._root, "wight");
       const option = {
         title: {
-          text: "Funnel",
+          text: "",
         },
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c}%",
+          formatter: "",
         },
-        toolbox: {
-          feature: {
-            dataView: { readOnly: false },
-            restore: {},
-            saveAsImage: {},
-          },
-        },
+
         legend: {
-          data: ["Show", "Click", "Visit", "Inquiry", "Order"],
+          data,
         },
         series: [
           {
@@ -79,13 +73,8 @@ var getScriptPromisify = (src) => {
             left: "10%",
             top: 60,
             bottom: 60,
-            width: "80%",
-            min: 0,
-            max: 100,
-            minSize: "0%",
-            maxSize: "100%",
             sort: "descending",
-            gap: 2,
+            gap: 1.5,
             label: {
               show: true,
               position: "inside",
