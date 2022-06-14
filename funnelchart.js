@@ -60,7 +60,7 @@ var getScriptPromisify = (src) => {
   },
   tooltip: {
     trigger: 'item',
-    formatter: ''
+    formatter: '{a} <br/>{b} : {c}'
   },
   legend: {
     data,
