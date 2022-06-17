@@ -7,11 +7,11 @@ var getScriptPromisify = (src) => {
 (function () {
   const prepared = document.createElement("template");
   prepared.innerHTML = `
-          <style>
-          </style>
-          <div id="root" style="width: 100%; height: 100%;">
-          </div>
-        `;
+              <style>
+              </style>
+              <div id="root" style="width: 100%; height: 100%;">
+              </div>
+            `;
   class FunnelChartPrepped extends HTMLElement {
     constructor() {
       super();
