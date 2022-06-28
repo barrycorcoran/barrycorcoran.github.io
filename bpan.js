@@ -53,5 +53,5 @@
     }
   }
 
-  customElements.define("github-sap-funnel-chart", FunnelChartPrepped);
+  customElements.define("github-sap-funnel-chart-bpan", FunnelChartPrepped);
 })();
