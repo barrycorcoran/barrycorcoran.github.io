@@ -11,7 +11,7 @@
         {
             "kind": "main",
             "tag": "github-sap-demo-sample-chart",
-            "url": "https://barrycorcoran.github.io/dataBindings.js",
+            "url": "https://barrycorcoran.github.io/sourceCode/sourceCode.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
