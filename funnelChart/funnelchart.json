@@ -11,7 +11,7 @@
         {
             "kind": "main",
             "tag": "github-sap-funnel-chart",
-            "url": "https://barrycorcoran.github.io/funnelchart.js",
+            "url": "https://barrycorcoran.github.io/funnelChart/funnelchart.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
